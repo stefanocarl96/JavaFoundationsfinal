@@ -17,10 +17,10 @@ public abstract class Dish {
 
     public Dish(String dishName, boolean glutenFree, boolean vegetarian, boolean halalMeat, boolean seafoodFree, String extras) {
         this.dishName = dishName;
-        this.glutenFree = glutenFree;
         this.vegetarian = vegetarian;
-        this.halalMeat = halalMeat;
+        this.glutenFree = glutenFree;
         this.seafoodFree = seafoodFree;
+        this.halalMeat = halalMeat;
         this.extras = extras;
         dishes.add(this);
     }
@@ -36,13 +36,6 @@ public abstract class Dish {
     public String getDishName() { return dishName; }
     public void setDishName(String dName) { this.dishName = dName; }
 
-    public boolean isGlutenFree() {
-        return glutenFree;
-    }
-
-    public void setGlutenFree(boolean glutenFree) {
-        this.glutenFree = glutenFree;
-    }
 
     public boolean isVegetarian() {
         return vegetarian;
@@ -50,6 +43,15 @@ public abstract class Dish {
 
     public void setVegetarian(boolean vegetarian) {
         this.vegetarian = vegetarian;
+    }
+
+    public boolean isGlutenFree() {
+        return glutenFree;
+    }
+
+    public void setGlutenFree(boolean glutenFree) {
+        this.glutenFree = glutenFree;
+
     }
 
     public boolean isHalalMeat() {

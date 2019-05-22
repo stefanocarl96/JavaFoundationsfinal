@@ -1,5 +1,7 @@
 package com.company.service;
 
+import com.company.model.Dish;
+
 import java.util.List;
 
 // 'OnlineOrderOps' is an interface designed by the system administrator. The aim is to indicate the

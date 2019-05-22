@@ -1,25 +1,33 @@
 package com.company.service;
 
-        import java.io.BufferedReader;
-        import java.io.FileReader;
-        import java.io.PrintWriter;
-        import java.util.*;
+import com.company.model.Dish;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.PrintWriter;
+import java.util.*;
 
 public class OrdersManager implements OnlineOrderOps {
+
+    private Scanner sc;
+    private Object filePath;
+    private IdentityHashMap ordersMap;
 
     public OrdersManager() {
     }
 
     public List<Order> readCSV(String fileName) throws Exception {
 
-        BufferedReader reader = new BufferedReader(new FileReader(fileName));
-        CSVReader csvReader = new CSVReader(reader);
-        Map<String, String> ordersMap = new HashMap<String, String>();
-        String[] categories = csvReader.readNext();
+        String filePath = "./src/com/company/data/online-order-sample.csv";
+        Scanner sc = new Scanner(new filePath(filePath));
+        while (sc.hasNext()) {
+        System.out.println(sc.nextLine());
+        }
 
         while (true) {
-            String[] order = csvReader.readNext();
+            String[] order = sc.nextLine();
             if (order != null) {
+                ≤ ordersMap;
                 for (int i = 0; i < order.length; i++) {
                     ordersMap.put(categories[i], order[i]);
                 }
