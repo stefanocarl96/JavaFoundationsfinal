@@ -12,6 +12,7 @@ public class OrdersManager implements OnlineOrderOps {
     private Scanner sc;
     private Object filePath;
     private IdentityHashMap ordersMap;
+    private Object[] categories;
 
     public OrdersManager() {
     }
